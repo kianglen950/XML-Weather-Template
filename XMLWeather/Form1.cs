@@ -13,8 +13,8 @@ namespace XMLWeather
 {
     public partial class Form1 : Form
     {
-        // TODO: create list to hold day objects
-
+        //list to hold day objects
+        public static List<Day> days = new List<Day>();
 
         public Form1()
         {
@@ -22,7 +22,7 @@ namespace XMLWeather
 
             ExtractForecast();
             ExtractCurrent();
-            
+
             // open weather screen for todays weather
             CurrentScreen cs = new CurrentScreen();
             this.Controls.Add(cs);
@@ -34,11 +34,35 @@ namespace XMLWeather
 
             while (reader.Read())
             {
-                //TODO: create a day object
 
-                //TODO: fill day object with required data
+                //create a day object
+                Day d = new Day();
 
-                //TODO: if day object not null add to the days list
+                //fill day object with required data
+                reader.ReadToFollowing("time");
+                d.date = reader.GetAttribute("day");
+
+                reader.ReadToFollowing("symbol");
+                d.condition = reader.GetAttribute("number");
+                d.conditionName = reader.GetAttribute("name");
+
+                reader.ReadToFollowing("temperature");
+                d.tempLow = reader.GetAttribute("min");
+                d.tempHigh = reader.GetAttribute("max");
+
+                reader.ReadToFollowing("humidity");
+                d.humidity = reader.GetAttribute("value");
+                d.percent = reader.GetAttribute("unit");
+
+                reader.ReadToFollowing("clouds");
+                d.percent = reader.GetAttribute("value");
+
+
+                //if day object not null add to the days list
+                if (d.date != null)
+                {
+                    days.Add(d);
+                }
             }
         }
 
@@ -48,8 +72,30 @@ namespace XMLWeather
             XmlReader reader = XmlReader.Create("http://api.openweathermap.org/data/2.5/weather?q=Stratford,CA&mode=xml&units=metric&appid=3f2e224b815c0ed45524322e145149f0");
 
             //TODO: find the city and current temperature and add to appropriate item in days list
+             while (reader.Read())
+            {
 
+
+                reader.ReadToFollowing("city");
+                days[0].location = reader.GetAttribute("name");
+
+                reader.ReadToFollowing("symbol");
+                days[0].condition = reader.GetAttribute("number");
+                days[0].conditionName = reader.GetAttribute("name");
+
+                reader.ReadToFollowing("temperature");
+                days[0].currentTemp = reader.GetAttribute("value");
+                days[0].tempLow = reader.GetAttribute("min");
+                days[0].tempHigh = reader.GetAttribute("max");
+                days[0].tempUnit = reader.GetAttribute("unit");
+
+                reader.ReadToFollowing("humidity");
+                days[0].humidity = reader.GetAttribute("value");
+                days[0].percent = reader.GetAttribute("unit");
+
+            }
         }
+
 
 
     }
