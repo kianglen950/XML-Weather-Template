@@ -39,12 +39,26 @@ namespace XMLWeather
                 Day d = new Day();
 
                 //fill day object with required data
+
                 reader.ReadToFollowing("time");
                 d.date = reader.GetAttribute("day");
+
+                reader.ReadToFollowing("sun");
+                d.sunRise = reader.GetAttribute("rise");
+                d.sunSet = reader.GetAttribute("set");
 
                 reader.ReadToFollowing("symbol");
                 d.condition = reader.GetAttribute("number");
                 d.conditionName = reader.GetAttribute("name");
+                d.icon = reader.GetAttribute("var");
+
+
+                reader.ReadToFollowing("windDirection");
+                d.windDirection = reader.GetAttribute("name");
+
+                reader.ReadToFollowing("windSpeed");
+                d.windSpeed = reader.GetAttribute("mps");
+                d.windUnit = reader.GetAttribute("unit");
 
                 reader.ReadToFollowing("temperature");
                 d.tempLow = reader.GetAttribute("min");
@@ -72,16 +86,13 @@ namespace XMLWeather
             XmlReader reader = XmlReader.Create("http://api.openweathermap.org/data/2.5/weather?q=Stratford,CA&mode=xml&units=metric&appid=3f2e224b815c0ed45524322e145149f0");
 
             //TODO: find the city and current temperature and add to appropriate item in days list
-             while (reader.Read())
-            {
+             
+            
 
 
                 reader.ReadToFollowing("city");
                 days[0].location = reader.GetAttribute("name");
 
-                reader.ReadToFollowing("symbol");
-                days[0].condition = reader.GetAttribute("number");
-                days[0].conditionName = reader.GetAttribute("name");
 
                 reader.ReadToFollowing("temperature");
                 days[0].currentTemp = reader.GetAttribute("value");
@@ -93,7 +104,15 @@ namespace XMLWeather
                 days[0].humidity = reader.GetAttribute("value");
                 days[0].percent = reader.GetAttribute("unit");
 
+                reader.ReadToFollowing("weather");
+                days[0].condition = reader.GetAttribute("number");
+                days[0].conditionName = reader.GetAttribute("value");
+
+            reader.ReadToFollowing("lastupdate");
+            {
+                days[0].updateTime = reader.GetAttribute("value");
             }
+            
         }
 
 

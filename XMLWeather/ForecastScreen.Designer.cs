@@ -30,165 +30,126 @@
         {
             this.forecastLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.min1 = new System.Windows.Forms.Label();
-            this.minLabel = new System.Windows.Forms.Label();
-            this.max1 = new System.Windows.Forms.Label();
-            this.maxLabel = new System.Windows.Forms.Label();
+            this.min1Output = new System.Windows.Forms.Label();
+            this.min1Label = new System.Windows.Forms.Label();
+            this.max1Output = new System.Windows.Forms.Label();
+            this.max1Label = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.date1 = new System.Windows.Forms.Label();
-            this.date2 = new System.Windows.Forms.Label();
-            this.min2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.max2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.date1Output = new System.Windows.Forms.Label();
+            this.forecastIconBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.forecastIconBox)).BeginInit();
             this.SuspendLayout();
             // 
             // forecastLabel
             // 
             this.forecastLabel.BackColor = System.Drawing.Color.Transparent;
-            this.forecastLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forecastLabel.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forecastLabel.ForeColor = System.Drawing.Color.White;
             this.forecastLabel.Location = new System.Drawing.Point(142, 14);
             this.forecastLabel.Name = "forecastLabel";
-            this.forecastLabel.Size = new System.Drawing.Size(83, 28);
+            this.forecastLabel.Size = new System.Drawing.Size(83, 11);
             this.forecastLabel.TabIndex = 62;
             this.forecastLabel.Text = "7 Day";
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(22, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 28);
+            this.label3.Size = new System.Drawing.Size(83, 21);
             this.label3.TabIndex = 61;
             this.label3.Text = "Today";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // min1
+            // min1Output
             // 
-            this.min1.BackColor = System.Drawing.Color.White;
-            this.min1.Location = new System.Drawing.Point(203, 85);
-            this.min1.Name = "min1";
-            this.min1.Size = new System.Drawing.Size(22, 13);
-            this.min1.TabIndex = 48;
+            this.min1Output.BackColor = System.Drawing.Color.Transparent;
+            this.min1Output.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.min1Output.Location = new System.Drawing.Point(203, 85);
+            this.min1Output.Name = "min1Output";
+            this.min1Output.Size = new System.Drawing.Size(22, 13);
+            this.min1Output.TabIndex = 48;
             // 
-            // minLabel
+            // min1Label
             // 
-            this.minLabel.AutoSize = true;
-            this.minLabel.ForeColor = System.Drawing.Color.White;
-            this.minLabel.Location = new System.Drawing.Point(107, 85);
-            this.minLabel.Name = "minLabel";
-            this.minLabel.Size = new System.Drawing.Size(90, 13);
-            this.minLabel.TabIndex = 46;
-            this.minLabel.Text = " Min Temperature";
+            this.min1Label.AutoSize = true;
+            this.min1Label.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.min1Label.ForeColor = System.Drawing.Color.White;
+            this.min1Label.Location = new System.Drawing.Point(94, 85);
+            this.min1Label.Name = "min1Label";
+            this.min1Label.Size = new System.Drawing.Size(103, 13);
+            this.min1Label.TabIndex = 46;
+            this.min1Label.Text = " Min Temperature";
             // 
-            // max1
+            // max1Output
             // 
-            this.max1.BackColor = System.Drawing.Color.White;
-            this.max1.Location = new System.Drawing.Point(203, 55);
-            this.max1.Name = "max1";
-            this.max1.Size = new System.Drawing.Size(22, 13);
-            this.max1.TabIndex = 45;
+            this.max1Output.BackColor = System.Drawing.Color.Transparent;
+            this.max1Output.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.max1Output.Location = new System.Drawing.Point(203, 55);
+            this.max1Output.Name = "max1Output";
+            this.max1Output.Size = new System.Drawing.Size(22, 13);
+            this.max1Output.TabIndex = 45;
             // 
-            // maxLabel
+            // max1Label
             // 
-            this.maxLabel.AutoSize = true;
-            this.maxLabel.ForeColor = System.Drawing.Color.White;
-            this.maxLabel.Location = new System.Drawing.Point(107, 55);
-            this.maxLabel.Name = "maxLabel";
-            this.maxLabel.Size = new System.Drawing.Size(90, 13);
-            this.maxLabel.TabIndex = 44;
-            this.maxLabel.Text = "Max Temperature";
+            this.max1Label.AutoSize = true;
+            this.max1Label.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.max1Label.ForeColor = System.Drawing.Color.White;
+            this.max1Label.Location = new System.Drawing.Point(100, 55);
+            this.max1Label.Name = "max1Label";
+            this.max1Label.Size = new System.Drawing.Size(97, 13);
+            this.max1Label.TabIndex = 44;
+            this.max1Label.Text = "Max Temperature";
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(129, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 27);
+            this.label5.Size = new System.Drawing.Size(115, 30);
             this.label5.TabIndex = 63;
             this.label5.Text = "____________________________";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // date1
+            // date1Output
             // 
-            this.date1.AutoSize = true;
-            this.date1.ForeColor = System.Drawing.Color.White;
-            this.date1.Location = new System.Drawing.Point(24, 55);
-            this.date1.Name = "date1";
-            this.date1.Size = new System.Drawing.Size(30, 13);
-            this.date1.TabIndex = 64;
-            this.date1.Text = "Date";
+            this.date1Output.AutoSize = true;
+            this.date1Output.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date1Output.ForeColor = System.Drawing.Color.White;
+            this.date1Output.Location = new System.Drawing.Point(3, 55);
+            this.date1Output.Name = "date1Output";
+            this.date1Output.Size = new System.Drawing.Size(31, 13);
+            this.date1Output.TabIndex = 64;
+            this.date1Output.Text = "Date";
             // 
-            // date2
+            // forecastIconBox
             // 
-            this.date2.AutoSize = true;
-            this.date2.ForeColor = System.Drawing.Color.White;
-            this.date2.Location = new System.Drawing.Point(24, 108);
-            this.date2.Name = "date2";
-            this.date2.Size = new System.Drawing.Size(30, 13);
-            this.date2.TabIndex = 69;
-            this.date2.Text = "Date";
-            // 
-            // min2
-            // 
-            this.min2.BackColor = System.Drawing.Color.White;
-            this.min2.Location = new System.Drawing.Point(203, 138);
-            this.min2.Name = "min2";
-            this.min2.Size = new System.Drawing.Size(22, 13);
-            this.min2.TabIndex = 68;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(107, 138);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
-            this.label4.TabIndex = 67;
-            this.label4.Text = " Min Temperature";
-            // 
-            // max2
-            // 
-            this.max2.BackColor = System.Drawing.Color.White;
-            this.max2.Location = new System.Drawing.Point(203, 108);
-            this.max2.Name = "max2";
-            this.max2.Size = new System.Drawing.Size(22, 13);
-            this.max2.TabIndex = 66;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(107, 108);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 13);
-            this.label7.TabIndex = 65;
-            this.label7.Text = "Max Temperature";
+            this.forecastIconBox.Location = new System.Drawing.Point(40, 38);
+            this.forecastIconBox.Name = "forecastIconBox";
+            this.forecastIconBox.Size = new System.Drawing.Size(53, 92);
+            this.forecastIconBox.TabIndex = 65;
+            this.forecastIconBox.TabStop = false;
             // 
             // ForecastScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.date2);
-            this.Controls.Add(this.min2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.max2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.date1);
+            this.Controls.Add(this.forecastIconBox);
+            this.Controls.Add(this.date1Output);
             this.Controls.Add(this.forecastLabel);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.min1);
-            this.Controls.Add(this.minLabel);
-            this.Controls.Add(this.max1);
-            this.Controls.Add(this.maxLabel);
+            this.Controls.Add(this.min1Output);
+            this.Controls.Add(this.min1Label);
+            this.Controls.Add(this.max1Output);
+            this.Controls.Add(this.max1Label);
             this.Controls.Add(this.label5);
             this.Name = "ForecastScreen";
-            this.Size = new System.Drawing.Size(250, 400);
+            this.Size = new System.Drawing.Size(685, 418);
+            ((System.ComponentModel.ISupportInitialize)(this.forecastIconBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,16 +159,12 @@
 
         private System.Windows.Forms.Label forecastLabel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label min1;
-        private System.Windows.Forms.Label minLabel;
-        private System.Windows.Forms.Label max1;
-        private System.Windows.Forms.Label maxLabel;
+        private System.Windows.Forms.Label min1Output;
+        private System.Windows.Forms.Label min1Label;
+        private System.Windows.Forms.Label max1Output;
+        private System.Windows.Forms.Label max1Label;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label date1;
-        private System.Windows.Forms.Label date2;
-        private System.Windows.Forms.Label min2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label max2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label date1Output;
+        private System.Windows.Forms.PictureBox forecastIconBox;
     }
 }

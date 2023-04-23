@@ -24,10 +24,14 @@ namespace XMLWeather
             currentOutput.Text = $"{Math.Round(Convert.ToDouble(Form1.days[0].currentTemp), 0).ToString()}°C";
             minOutput.Text = $"{Math.Round(Convert.ToDouble(Form1.days[0].tempLow), 0).ToString()}°C";
             maxOutput.Text = $"{Math.Round(Convert.ToDouble(Form1.days[0].tempHigh), 0).ToString()}°C";
-            conditionOutput.Text = Form1.days[0].condition;
-            currentConditionLabel.Text =$"Condition: {Form1.days[0].conditionName}";
-            humidityOutput.Text =$"Humidity: {Form1.days[0].humidity}{Form1.days[0].percent}";
-
+            currentConditionLabel.Text = $"Condition: {Form1.days[0].conditionName}";
+            humidityOutput.Text = $"Humidity: {Form1.days[0].humidity}{Form1.days[0].percent}";
+            windOutput.Text = $"Wind: {Math.Round(Convert.ToDouble(Form1.days[0].windSpeed), 1)} {Form1.days[0].windUnit} {Form1.days[0].windDirection}";
+            sunRiseOutput.Text = $"Sun Rise: {Form1.days[0].sunRise}";
+            sunSetOutput.Text = $"Sun Set: {Form1.days[0].sunSet}";
+            updateOutput.Text = $"Last updated: {Form1.days[0].updateTime}";
+            string url = $"https://openweathermap.org/img/wn/{Form1.days[0].icon}@2x.png";
+            iconBox.LoadAsync(url);
             BackgroundChange();
         }
 
@@ -73,6 +77,11 @@ namespace XMLWeather
             {
                 this.BackColor = Color.Tan;
             }
+
+        }
+
+        private void CurrentScreen_Load(object sender, EventArgs e)
+        {
 
         }
     }
